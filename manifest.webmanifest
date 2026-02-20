@@ -1,8 +1,8 @@
 {
   "name": "드럼 환산 계산기(정수환산)",
   "short_name": "드럼계산기",
-"start_url": "/drum-app/",
-"scope": "/drum-app/",
+"start_url": "/",
+"scope": "/",
 "display": "standalone"
   "background_color": "#ffffff",
   "theme_color": "#111111",
