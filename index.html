@@ -120,5 +120,14 @@
     });
   }
 </script>
+<script>
+  if ("serviceWorker" in navigator) {
+    window.addEventListener("load", function () {
+      navigator.serviceWorker.register("./sw.js")
+        .then(function () { console.log("SW registered"); })
+        .catch(function (err) { console.log("SW failed:", err); });
+    });
+  }
+</script>
 </body>
 </html>
