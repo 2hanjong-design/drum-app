@@ -1,4 +1,4 @@
-const CACHE_NAME = "drum-app-v5";
+const CACHE_NAME = "drum-app-netlify-v6";
 const ASSETS = [
   "./",
   "./index.html",
