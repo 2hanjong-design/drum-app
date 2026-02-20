@@ -9,3 +9,4 @@
   [headers.values]
     Content-Type = "application/javascript; charset=utf-8"
     Cache-Control = "no-cache"
+    Content-Disposition = "inline"
