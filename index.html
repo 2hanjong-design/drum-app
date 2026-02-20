@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="theme-color" content="#111111" />
-  <link rel="manifest" href="/manifest.webmanifest">
+  <link rel="manifest" href="./manifest.webmanifest" />
   <link rel="icon" href="./icons/icon-192.png" />
   <title>드럼 환산 계산기 (정수 환산)</title>
   <style>
@@ -26,20 +26,17 @@
 <body>
   <div class="wrap">
     <div class="card">
-      <div style="text-align:center; margin-bottom:15px;">
-  <img src="logo.png" style="max-width:180px; height:auto;">
-</div>
       <h1>드럼당분석 환산 계산기</h1>
       <div class="sub">
         고정값: 1드럼 = 200L<br/>
-        입력: 월 드럼 수량 + 유류 단가(원/L)<br/>
+        입력: 월 드럼 수량 + 휘발유 단가(원/L)<br/>
         환산건수는 <b>소수점 이하 제거(내림)</b> 됩니다.
       </div>
 
       <label>월 드럼 수량</label>
       <input id="drumsPerMonth" type="number" inputmode="numeric" placeholder="예: 360" />
 
-      <label>유류평균 단가 (원/L)</label>
+      <label>휘발유 단가 (원/L)</label>
       <input id="wonPerLiter" type="number" inputmode="numeric" placeholder="예: 1680" />
 
       <div class="grid">
@@ -111,41 +108,5 @@
 
     calc();
   </script>
-  <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("./sw.js")
-        .then(() => console.log("SW registered"))
-        .catch(err => console.log("SW register failed", err));
-    });
-  }
-</script>
-<script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", function () {
-      navigator.serviceWorker.register("./sw.js")
-        .then(function () { console.log("SW registered"); })
-        .catch(function (err) { console.log("SW failed:", err); });
-    });
-  }
-</script>
-  <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/drum-app/sw.js", { scope: "/drum-app/" })
-        .then(() => console.log("SW registered"))
-        .catch(err => console.log("SW failed", err));
-    });
-  }
-</script>
-  <script>
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker.register("/sw.js", { scope: "/" })
-        .then(() => console.log("SW registered at /"))
-        .catch(err => console.log("SW failed:", err));
-    });
-  }
-</script>
 </body>
 </html>
